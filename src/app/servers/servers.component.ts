@@ -4,10 +4,17 @@ import { Component } from "@angular/core";
     //selector: '[app-servers]',
     //selector: '.app-servers',
     selector: 'app-servers', // should be
-    template: `
+    /*template: `
         <app-server></app-server>
-        <app-server></app-server>`
+        <app-server></app-server>`*/
+    templateUrl: './servers.component.html'
 })
 export class ServersComponent {
+    allowNewServer = false;
 
+    constructor() {
+        setTimeout(() => {
+            this.allowNewServer = true;
+        }, 2000);
+    }
 }
